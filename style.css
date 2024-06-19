@@ -93,13 +93,17 @@ hr {
     opacity: .2;
 }
 
+
+
 .shadow1 {
     overflow: hidden;
     background-color: transparent;
     box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7);
 }
 
-
+.main-top-margin{
+    margin-top: 50px;
+}
 /* box */
 .box {
     overflow: hidden;
@@ -172,9 +176,9 @@ hr {
   /* ratio 1.15 */
   .card-instax img {
     width: 100%;
-    max-width: 350px;
+    max-width: 365px;
     /* Default card width for desktop */
-    height: 402px;
+    height: 417px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 30px;
