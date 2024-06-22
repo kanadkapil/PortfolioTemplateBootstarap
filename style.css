@@ -1,4 +1,9 @@
-
+/* shadow1
+box
+round1
+round2 
+zoom
+media query */
 
 /* https: //getbootstrap.com/docs/5.3/components/collapse/#example
 <input type="color" class="form-control form-control-color" value="#CCCCCC">data-bs-theme="dark" */
@@ -21,13 +26,16 @@ h5,
 h6,
 p {
     font-weight: 400;
+    text-align: justify;
 }
 
 a.card-link {
     text-decoration: none;
     color: inherit;
-    display: block; /* Makes the entire card clickable */
+    display: block;
+    /* Makes the entire card clickable */
 }
+
 a.card-link:hover {
     text-decoration: none;
 }
@@ -88,17 +96,13 @@ hr {
     opacity: .2;
 }
 
-
-
 .shadow1 {
     overflow: hidden;
     background-color: transparent;
     box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7);
 }
 
-.main-top-margin{
-    margin-top: 50px;
-}
+
 /* box */
 .box {
     overflow: hidden;
@@ -166,18 +170,18 @@ hr {
     /* Default card width for desktop */
     height: 504px;
     margin-bottom: 20px;
-  }
-  
-  /* ratio 1.15 */
-  .card-instax img {
+}
+
+/* ratio 1.15 */
+.card-instax img {
     width: 100%;
-    max-width: 365px;
+    max-width: 350px;
     /* Default card width for desktop */
-    height: 417px;
+    height: 402px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 30px;
-  }
+}
 
 /* glow on hover  */
 .glow-on-hover {
@@ -207,7 +211,70 @@ hr {
         height: 360px;
         /* Increased card height for mobile */
     }
+        .font1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 350;
+            font-size: 18px;
+        }
+    
+        .font2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 350;
+            font-size: 20px;
+        }
+    
+        .font3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 350;
+            font-size: 21px;
+        }
+    }
 
+    /* Media Queries */
+/* @media (max-width: 1024px) {
+    .card-custom {
+      max-width: 320px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-custom {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-instax {
+      max-width: 320px;
+    }
+  
+    .card-instax img {
+      padding: 20px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card-custom {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-instax {
+      max-width: 280px;
+    }
+  
+    .card-instax img {
+      padding: 20px 0;
+    }
+  }
+   */
+  /* Custom Navbar and Footer */
+  /* .navbar.custom-color {
+    background-color: #e4ff5c;
+  }
+  
+  footer.custom-color {
+    background-color: #e4ff5c;
+  } */
     .sidebar {
         width: 0;
         /* Collapse the width */
@@ -221,24 +288,24 @@ hr {
     }
 
     /* font size  */
-.font1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 350;
-    font-size: 21px;
-}
+    .font1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 350;
+        font-size: 21px;
+    }
 
-.font2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 350;
-    font-size: 22px;
-}
+    .font2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 350;
+        font-size: 22px;
+    }
 
-.font3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 350;
-    font-size: 24px;
-}
-}
+    .font3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 350;
+        font-size: 24px;
+    }
+
 
 /* ------------------------------------- */
 
