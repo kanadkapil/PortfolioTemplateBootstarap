@@ -1,67 +1,16 @@
-/* Global styles */
+
+
+/* https: //getbootstrap.com/docs/5.3/components/collapse/#example
+<input type="color" class="form-control form-control-color" value="#CCCCCC">data-bs-theme="dark" */
+
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    line-height: 1.6;
+    /* Fallback font for non-supporting browsers */
 }
 
-.navbar {
-    background-color: #333333;
-    padding: 10px 20px;
-}
-
-.navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.nav-link {
-    color: #ffffff !important;
-    font-size: 18px;
-}
-
-.nav-link:hover {
-    color: #f0ad4e !important;
-}
-
-.navbar-toggler {
-    border: none;
-    color: #ffffff !important;
-}
-
-.masthead-subheading {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 5px;
-}
-
-.card-img-top {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.card-text {
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.btn-outline-light {
-    border-color: #ffffff;
-    color: #ffffff;
-    transition: all 0.3s;
-}
-
-.btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #333333;
+p {
+    font-size: 22px;
+    font-weight: 350;
 }
 
 h1,
@@ -69,143 +18,341 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    color: #ffffff;
-    font-weight: bold;
+h6,
+p {
+    font-weight: 400;
 }
+
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Makes the entire card clickable */
+}
+a.card-link:hover {
+    text-decoration: none;
+}
+
+.head-text {
+    font-size: 29px;
+    font-weight: 640;
+}
+
+
+/* zoom effect  */
+
+.zoom {
+    /* padding: 0px; */
+    /* background-color: blue; */
+    transition: transform .3s;
+    /* width: 0px; */
+    /* height: 0px; */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+}
+
+/* font size  */
+.font1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 21px;
+}
+
+.font2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 24px;
+}
+
+.font3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 30px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+/* hr  */
 
 hr {
-    border-color: #ffffff;
+    border-top: 1px solid #363636;
+    height: 1px;
+    opacity: .2;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
+
+
+.shadow1 {
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.main-top-margin{
+    margin-top: 50px;
+}
+/* box */
+.box {
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* rounded borders  */
+
+.round1 {
     border-radius: 10px;
-    padding: 10px;
 }
 
-.carousel-caption h3,
-.carousel-caption p {
-    color: #ffffff;
+.round2 {
+    border-radius: 5px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: auto;
-    background: none;
-    text-shadow: none;
+.circle {
+    border-radius: 100%;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    color: #333333;
+/* carousel customization */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: #333333;
-    color: #ffffff;
+.carousel-item {
+    transition: transform 2000ms ease-in-out;
 }
 
-.skills-section h2 {
-    color: #ffffff;
+.carousel-inner {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
 }
 
-.collapse.show {
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* custom card settings  */
+
+.card-custom {
+    width: 100%;
+    max-width: 260px;
+    /* Default card width for desktop */
+    height: 390px;
+    margin: 0 auto;
+}
+
+.card-custom img {
+    width: 100%;
+    height: auto;
+}
+
+/* ratio 1.26 */
+.card-instax {
+    width: 100%;
+    max-width: 400px;
+    /* Default card width for desktop */
+    height: 504px;
+    margin-bottom: 20px;
+  }
+  
+  /* ratio 1.15 */
+  .card-instax img {
+    width: 100%;
+    max-width: 365px;
+    /* Default card width for desktop */
+    height: 417px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+/* glow on hover  */
+.glow-on-hover {
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+.glow-on-hover:hover {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+
+/* media query  */
+
+/* ---------------------------------- */
+@media (max-width: 768px) {
+
+    /* Media query for phone view */
+    .card-custom {
+        max-width: 520px;
+        /* Increased card width for mobile */
+        height: 360px;
+        /* Increased card height for mobile */
+    }
+
+    .sidebar {
+        width: 0;
+        /* Collapse the width */
+        transition: width 0.3s ease-in-out;
+        /* Optional animation */
+    }
+
+    /* hide is for hiding sidebar while in phone  */
+    .hide {
+        display: none;
+    }
+
+    /* font size  */
+.font1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 21px;
+}
+
+.font2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 22px;
+}
+
+.font3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 350;
+    font-size: 24px;
+}
+}
+
+/* ------------------------------------- */
+
+
+/* grad buttons  */
+.gradient-button {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
     display: block;
 }
 
-.card-custom {
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-}
-
-.card-custom .card-body {
-    padding: 20px;
-}
-
-.card-instax {
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-}
-
-.card-instax .card-body {
-    padding: 20px;
-}
-
-footer {
-    background-color: #414141;
-    color: #ffffff;
-    padding: 30px 20px;
+.gradient-button {
+    color: white;
+    font-weight: bold;
     text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
-footer a {
-    color: #ffffff;
+.gradient-button:hover {
+    transform: scale(1.05);
 }
 
-footer a:hover {
-    color: #f0ad4e;
+/* Gradient colors */
+.gradient1 {
+    background: linear-gradient(45deg, #ff9599, #ffcabb);
 }
 
-@media (max-width: 1024px) {
-    .navbar-brand {
-        font-size: 22px;
-    }
-
-    .nav-link {
-        font-size: 16px;
-    }
-
-    .card-img-top {
-        width: 80%;
-    }
+.gradient2 {
+    background: linear-gradient(45deg, #aa8dee, #f3a8de);
 }
 
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 20px;
-    }
-
-    .nav-link {
-        font-size: 14px;
-    }
-
-    .card-img-top {
-        width: 70%;
-    }
-
-    .card-title {
-        font-size: 20px;
-    }
-
-    .card-text {
-        font-size: 14px;
-    }
+.gradient3 {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
 }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 18px;
-    }
+.gradient4 {
+    background: linear-gradient(45deg, hsl(218, 100%, 94%), #a4e2ff);
+}
 
-    .nav-link {
-        font-size: 12px;
-    }
+.gradient5 {
+    background: linear-gradient(45deg, #6c87ff, #b36bfc);
+}
 
-    .card-img-top {
-        width: 60%;
-    }
+.gradient6 {
+    background: linear-gradient(45deg, #a0ff8e, #8affd8);
+}
 
-    .card-title {
-        font-size: 18px;
-    }
+.gradient8 {
+    background: linear-gradient(45deg, #89f7fe, #66a6ff);
+}
 
-    .card-text {
-        font-size: 12px;
-    }
+/* pink */
+.gradient9 {
+    background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+}
+
+/* orange  */
+.gradient10 {
+    background: linear-gradient(45deg, #ffe8c9, #ff9d7d);
+}
+
+/* background colors  */
+/* dark-gradient-backgrounds.css */
+
+/* Midnight City */
+.bg-midnight-city {
+    background: linear-gradient(to right, #535353, #b1b4b8);
+}
+
+/* Dark Knight */
+.bg-dark-knight {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+/* Dark Ocean */
+.bg-dark-ocean {
+    background: linear-gradient(to right, #373b44, #4286f4);
+}
+
+/* Night Sky */
+.bg-night-sky {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+/* Mystic Night */
+.bg-mystic-night {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* Deep Blue */
+.bg-deep-blue {
+    background: linear-gradient(to right, #000428, #004e92);
+}
+
+/* Purple Dream */
+.bg-purple-dream {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+.bg-r {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #330033, #660066, #990099, #cc00cc, #ff00ff, #ff3399);
+    /* Adjust the colors as per your preference */
 }
