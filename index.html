@@ -38,52 +38,43 @@
 
 <body>
 
-    <!-- head section  -->
+
+    <!-- head section -->
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded bg-dark rounded-4 m-3 fixed-top"
-            aria-label="">
+        <nav class="navbar navbar-expand-lg bg-dark shadow1 round1 fixed-top">
             <div class="container">
-                <a class="navbar-brand mx-5 px-4" href="#">
-                    <h1 style="font-size: 30px;">Minion</h1>
+                <a class="navbar-brand" href="#">
+                    <h1 class="ps-5">LoGo</h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="" aria-controls="navbarsExample09" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarsExample09">
-                    <ul class="navbar-nav me-auto ">
+                <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-5 custom-text-color">
                         <li class="nav-item">
-                            <a class="nav-link active mx-4" aria-current="page" href="#">Home</a>
+                            <a class="nav-link px-3" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-4" href="#">Link</a>
+                            <a class="nav-link px-3" href="#">Features</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link px-3" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled mx-4" aria-disabled="true">Disabled</a>
-                        </li>
-                        <li class="nav-item dropdown mx-4">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                aria-expanded="false">Dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            <a class="nav-link px-3" href="#">Pricing</a>
                         </li>
                     </ul>
-                    <form role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Navbar End -->
     <!-- head section* -->
+
     <br><br>
     <!-- main section  -->
-    <main class="">
+    <main>
         <!-- row 1 -->
         <section class=" my-5">
             <div class="container-fluid ">
@@ -138,7 +129,7 @@
                     <!-- Profile card* -->
 
                     <!-- About section -->
-                    <div class="col-md-7 my-5 px-5">
+                    <div class="col-md-7 my-5 px-4">
                         <h1>About</h1>
                         <hr style="height: 2px; background-color: #ffffff;">
                         <p class="mt-3 font3">
@@ -286,7 +277,7 @@
                 <div class="row">
 
                     <!-- Details Column -->
-                    <div class="col-md-8">
+                    <div class="col-md-8 px-4">
                         <h1 class="mb-5">Details</h1>
                         <p class="font1">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cumque voluptatum nam
@@ -369,7 +360,7 @@
             <!-- Project section-->
             <div class="container shadow1 round1 mt-4">
                 <div class="row my-3 mx-2">
-                    <div class="col-md-4 my-sm-2 py-sm-1">
+                    <div class="col-md-4 my-sm-2 py-3 ">
                         <a href="jumbotron.html" class="card-link">
                             <div class="card p-4 box shadow1 round1 zoom">
                                 <strong class="font2 bold">lorem</strong>
@@ -378,7 +369,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 my-sm-2 py-sm-1">
+                    <div class="col-md-4 my-sm-2 py-3 ">
                         <a href="anotherfile.html" class="card-link">
                             <div class="card p-4 box shadow1 round1 zoom">
                                 <strong class="font2 bold">lorem</strong>
@@ -387,7 +378,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 my-sm-2 py-sm-1">
+                    <div class="col-md-4 my-sm-2 py-3 ">
                         <a href="yetanotherfile.html" class="card-link">
                             <div class="card p-4 box shadow1 round1 zoom">
                                 <strong class="font2 bold">lorem</strong>
@@ -433,7 +424,7 @@
                                 style="color: #ffffff;"></i></a>
                     </div>
                     <!-- box 3 -->
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-4 col-sm-12 my-3 ">
                         <h4>Hobbies</h4>
                         <p>
                             Reading Books <br>
@@ -447,7 +438,47 @@
         </footer>
     </section>
     <!-- footer section*  -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
 
+            // Get the search query
+            const query = document.getElementById('searchInput').value.toLowerCase();
+
+            // Clear previous highlights
+            document.querySelectorAll('.highlight').forEach(function (el) {
+                el.classList.remove('highlight');
+            });
+
+            if (!query) return;
+
+            // Find and highlight matches
+            const elements = document.querySelectorAll('h1, h2, h3, p, li, div'); // Add more selectors as needed
+            let firstMatch = null;
+
+            elements.forEach(function (el) {
+                const text = el.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    el.innerHTML = el.textContent.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    if (!firstMatch) firstMatch = el;
+                }
+            });
+
+            // Scroll to the first match
+            if (firstMatch) {
+                firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+
+        // Add some CSS to highlight the text
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .highlight {
+                background-color: yellow;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 
 </body>
 
